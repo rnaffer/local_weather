@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Weather</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid12.css">
+</head>
+
+<body>
+	<header id="header" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Local Weather</h2>
+            </div>
+        </div>
+    </header><!-- /header -->
+    <div class="loading none">
+        <i class="wi wi-cloud-down"></i>
+        <h5>Loading...</h5>
+    </div>
+    <section id="weather" class="container">
+        <div id="main-card" class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 id="location"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <section id="main-info" class="col-xs-4">
+                        <div>
+                            <div class="center-data-row">
+                                <div class="header-text"><h4></h4></div>
+                            </div>
+                            <div class="main-data-row">
+                                 <div class="value-d value-main"></div>
+                                <div class="degree"><i class="wi wi-celsius"></i></div>
+                            </div>
+                            <div id="degree" class="center-data-row">
+                                <a href="">
+                                    <div class="icon"><i class="wi wi-refresh"></i></div>
+                                    <div class="property">Celsius</div>
+                                </a>                                
+                            </div>
+                        </div>
+                    </section>
+                    <section id="secondary-info"  class="col-xs-2">
+                        <div>
+                            <div class="data-row">
+                                <div class="icon"><i class="wi wi-direction-up"></i></div>
+                                <div class="property">Max</div>
+                                <div id="max" class="value-d"></div>
+                            </div>
+                            <div class="data-row">
+                                <div class="icon"><i class="wi wi-direction-down"></i></div>
+                                <div class="property">Min</div>
+                                <div id="min" class="value-d"></div>
+                            </div>
+                        </div>                                               
+                    </section>
+                    <section id="weather-info" class="col-xs-3">
+                        <div> 
+                            <div class="weather-image">
+                                <div class="icon-big"><i class="wi"></i></div>
+                                <div class="weather-text">Partialy Cloud</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="other-info" class="col-xs-3">
+                        <div> <!-- align bottom div -->
+                            <div class="data-row">
+                                <div class="icon"><i class="wi wi-humidity"></i></div>
+                                <div class="property">Humidity</div>
+                                <div id="humidity" class="value"></div>
+                            </div>
+                            <div class="data-row">
+                                <div class="icon"><i class="wi wi-barometer"></i> </div>
+                                <div class="property">Pressure</div>
+                                <div id="pressure" class="value"></div>
+                            </div>
+                            <div class="data-row">
+                                <div class="icon"><i class="wi wi-dust"></i> </div>
+                                <div class="property">Wind</div>
+                                <div id="wind" class="value"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="week-cards" class="row">
+            <div class="col-xs-12">               
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>This is not your location? <a id="fix-location" href="" title="">Click Here!</a></p>
+        <p>Made By:<a href="https://github.com/rnaffer">@RNaffer</a></p>
+    </footer>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+// @import "../../bower_components/useful-less-mixins/mixins.less";
+
+@background-color: rgba(34, 34, 34, 0.5);
+
+html {
+	height: 100%;
+	color: #FFFFFF;
+	/* background: url("http://s6.postimg.org/nmbjs3znl/drizzle_compressor.jpg") center center; */
+	background: #AAAAAA;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-size: 100%;
+	height: inherit;
+	margin: 0;
+	font-family: "Open Sans", Verdana, sans-serif;
+}
+
+a {
+	color: #FFFFFF;
+	display: block;
+    height: 32px;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loading {
+	display: block;
+	position: absolute;
+	margin-left: auto;
+	text-align: center;
+	left: 47%;
+	top: 47%;
+
+	i {
+		-webkit-animation: zoom 0.8s linear infinite alternate;
+		animation: zoom 0.8s linear infinite alternate;
+	}	
+
+	h5 {
+		margin: 5px 0;
+	}
+
+	@keyframes zoom {
+		from { font-size: 2em; }
+		to { font-size: 2.5em; }
+	}
+}
+
+.none {
+	display: none;
+}
+
+.wi {
+	font-size: 1.8em;
+}
+
+.value, 
+.value-d {
+	font-size: 1em;
+	float: right;
+}
+
+.data-row,
+.center-data-row {
+	line-height: 2;
+	font-size: 1em;
+	max-height: 30px;
+	float: left;
+}
+
+.data-row {
+	width: 95%;
+	margin-top: 20px;
+
+	.icon,
+	.property {
+		float: left;
+	}
+
+	.icon {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}	
+}
+
+.center-data-row {
+	width: 100%;
+	text-align: center;
+
+	.icon,
+	.property {
+		float: none;
+		display: inline-block;
+	}
+
+	.icon {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.main-data-row {
+	clear: left;
+
+	.value-main {
+		font-size: 4.5em;
+		padding-left: 0.25em;
+		text-align: center;
+		line-height: 1.1;
+		display: inline-block;
+		float: none;
+		max-width: 200px;
+	}
+
+	.degree {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.weather-image {
+	line-height: 2;
+
+	.icon-big {
+		font-size: 2.5em;
+		max-height: 75px;
+	}
+
+	.weather-text {
+		font-size: 1em;
+	}
+}
+
+#header {
+	background-color: @background-color;
+	text-align: center;
+}
+
+#weather {
+
+	#main-card, 
+	#week-cards {
+		width: 750px;
+		margin-left: auto;
+		margin-right: auto;
+		display: none;
+	}
+	
+
+	#main-card {
+		height: 240px;
+		background-color: @background-color;		
+		margin-top: 6em;
+		text-align: center;
+
+		h2 {
+			font-size: 2.1em;
+			margin: 20px 0 10px ;
+		}
+
+		h4 {
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		section {
+			padding: 0;
+			height: 140px;
+
+			& > div {
+				display: block;
+				position: absolute;
+				bottom: 0px;
+				width: 100%; 
+			}
+		}
+
+		#main-info {
+			width: 31.3333%;
+
+			.data-row {
+				margin-top: 0px;
+				float: right;
+			}
+
+			.property {
+				vertical-align: top;
+			}
+
+			#degree {
+				background-color: transparent;
+    			        transition: background-color 1s ease;
+				-webkit-transition: background-color 1s ease;
+
+				:hover {
+					background-color: rgba(64, 64, 64, 0.5);
+				}
+			}
+		}
+		
+		#secondary-info {
+
+			.property {
+				display: inline-block;
+				width: 40px;
+			}
+		}
+
+		#weather-info {
+			width: 20%;
+		}
+
+		#other-info {
+			padding-left: 1.3em;
+
+			.data-row {
+				width: 100%;
+			}
+		}
+		
+	}
+
+	#week-cards {
+		height: 210px;
+		
+		&> div {
+			height: inherit;
+			padding: 0;
+		}
+
+		h4 {
+			text-align: center;
+			margin-bottom: 5px;
+		}
+
+		.data-row {
+			margin-top: 0px;
+			font-size: 0.9em;
+			padding-left: 18%;
+
+			.icon {
+				width: 25px;
+				text-align: center;
+
+				i {
+					font-size: 1.5em;
+				}
+			}
+
+			.value,
+			.value-d {
+				float: left;
+			}
+
+		}
+
+		.card {
+			background-color: @background-color;
+			height: 100%;
+			width: 18.9999%;
+			position: relative;
+			float: left;
+			margin: 15px 0.29em;
+		}
+
+		.card:first-child {
+			margin-left: 0;
+		}
+
+		.card:last-child {
+			margin-right: 0;
+		}
+
+		.weather-image {
+			font-size: 1.7em;
+			text-align: center;
+			max-height: 85px;
+		}
+	}	
+}
+
+#footer {
+	text-align: center;
+	padding-top: 30px;
+	display: none;
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+
+		&:hover {
+			color: #4343E9;
+		}
+	}
+
+	p:last-child {
+		font-size: 0.8em;
+		float: right;
+		margin-right: 20px;
+	}
+	
+}
+
+
+@media screen and (max-width: 750px) {
+	body {
+		font-size: 90%;
+	}
+}

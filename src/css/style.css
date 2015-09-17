@@ -1,0 +1,252 @@
+html {
+  height: 100%;
+  color: #FFFFFF;
+  /* background: url("http://s6.postimg.org/nmbjs3znl/drizzle_compressor.jpg") center center; */
+  background: #AAAAAA;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  font-size: 100%;
+  height: inherit;
+  margin: 0;
+  font-family: "Open Sans", Verdana, sans-serif;
+}
+a {
+  color: #FFFFFF;
+  display: block;
+  height: 32px;
+  min-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loading {
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  text-align: center;
+  left: 47%;
+  top: 47%;
+}
+.loading i {
+  -webkit-animation: zoom 0.8s linear infinite alternate;
+  animation: zoom 0.8s linear infinite alternate;
+}
+.loading h5 {
+  margin: 5px 0;
+}
+@keyframes zoom {
+  from {
+    font-size: 2em;
+  }
+  to {
+    font-size: 2.5em;
+  }
+}
+.none {
+  display: none;
+}
+.wi {
+  font-size: 1.8em;
+}
+.value,
+.value-d {
+  font-size: 1em;
+  float: right;
+}
+.data-row,
+.center-data-row {
+  line-height: 2;
+  font-size: 1em;
+  max-height: 30px;
+  float: left;
+}
+.data-row {
+  width: 95%;
+  margin-top: 20px;
+}
+.data-row .icon,
+.data-row .property {
+  float: left;
+}
+.data-row .icon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.center-data-row {
+  width: 100%;
+  text-align: center;
+}
+.center-data-row .icon,
+.center-data-row .property {
+  float: none;
+  display: inline-block;
+}
+.center-data-row .icon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.main-data-row {
+  clear: left;
+}
+.main-data-row .value-main {
+  font-size: 4.5em;
+  padding-left: 0.25em;
+  text-align: center;
+  line-height: 1.1;
+  display: inline-block;
+  float: none;
+  max-width: 200px;
+}
+.main-data-row .degree {
+  display: inline-block;
+  vertical-align: top;
+}
+.weather-image {
+  line-height: 2;
+}
+.weather-image .icon-big {
+  font-size: 2.5em;
+  max-height: 75px;
+}
+.weather-image .weather-text {
+  font-size: 1em;
+}
+#header {
+  background-color: rgba(34, 34, 34, 0.5);
+  text-align: center;
+}
+#weather #main-card,
+#weather #week-cards {
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+#weather #main-card {
+  height: 240px;
+  background-color: rgba(34, 34, 34, 0.5);
+  margin-top: 6em;
+  text-align: center;
+}
+#weather #main-card h2 {
+  font-size: 2.1em;
+  margin: 20px 0 10px ;
+}
+#weather #main-card h4 {
+  margin: 0;
+  padding-left: 10px;
+}
+#weather #main-card section {
+  padding: 0;
+  height: 140px;
+}
+#weather #main-card section > div {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+#weather #main-card #main-info {
+  width: 31.3333%;
+}
+#weather #main-card #main-info .data-row {
+  margin-top: 0px;
+  float: right;
+}
+#weather #main-card #main-info .property {
+  vertical-align: top;
+}
+#weather #main-card #main-info #degree {
+  background-color: transparent;
+  transition: background-color 1s ease;
+  -webkit-transition: background-color 1s ease;
+}
+#weather #main-card #main-info #degree :hover {
+  background-color: rgba(64, 64, 64, 0.5);
+}
+#weather #main-card #secondary-info .property {
+  display: inline-block;
+  width: 40px;
+}
+#weather #main-card #weather-info {
+  width: 20%;
+}
+#weather #main-card #other-info {
+  padding-left: 1.3em;
+}
+#weather #main-card #other-info .data-row {
+  width: 100%;
+}
+#weather #week-cards {
+  height: 210px;
+}
+#weather #week-cards > div {
+  height: inherit;
+  padding: 0;
+}
+#weather #week-cards h4 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#weather #week-cards .data-row {
+  margin-top: 0px;
+  font-size: 0.9em;
+  padding-left: 18%;
+}
+#weather #week-cards .data-row .icon {
+  width: 25px;
+  text-align: center;
+}
+#weather #week-cards .data-row .icon i {
+  font-size: 1.5em;
+}
+#weather #week-cards .data-row .value,
+#weather #week-cards .data-row .value-d {
+  float: left;
+}
+#weather #week-cards .card {
+  background-color: rgba(34, 34, 34, 0.5);
+  height: 100%;
+  width: 18.9999%;
+  position: relative;
+  float: left;
+  margin: 15px 0.29em;
+}
+#weather #week-cards .card:first-child {
+  margin-left: 0;
+}
+#weather #week-cards .card:last-child {
+  margin-right: 0;
+}
+#weather #week-cards .weather-image {
+  font-size: 1.7em;
+  text-align: center;
+  max-height: 85px;
+}
+#footer {
+  text-align: center;
+  padding-top: 30px;
+  display: none;
+}
+#footer a {
+  display: inline-block;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #4343E9;
+}
+#footer p:last-child {
+  font-size: 0.8em;
+  float: right;
+  margin-right: 20px;
+}
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 90%;
+  }
+}
